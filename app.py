@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS  # Import CORS
 import numpy as np
 import logging
 from matrix_operations import add_matrices, subtract_matrices, multiply_matrices, find_determinant
 
 
 app = Flask(__name__, static_url_path='/static')
+CORS(app)  # Enable CORS for your app
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)  # Set the logging level to DEBUG or INFO
