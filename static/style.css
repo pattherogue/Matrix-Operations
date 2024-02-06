@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+label, select {
+    display: block;
+    margin: 10px 0;
+}
+
+table {
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 5px;
+    text-align: center;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}

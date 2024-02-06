@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrix Operations Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Matrix Operations Calculator</h1>
+    <form id="matrix-form">
+        <!-- Select operation -->
+        <label for="operation">Select operation:</label>
+        <select id="operation" name="operation">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="determinant">Determinant</option>
+        </select>
+        <br>
+
+        <!-- Input matrices -->
+        <div id="matrix-inputs">
+            <div id="matrix1">
+                <h2>Matrix 1</h2>
+                <!-- Input fields for Matrix 1 -->
+                <table>
+                    <tr>
+                        <td><input type="text" name="matrix1_0_0" placeholder="0,0"></td>
+                        <td><input type="text" name="matrix1_0_1" placeholder="0,1"></td>
+                        <td><input type="text" name="matrix1_0_2" placeholder="0,2"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="matrix1_1_0" placeholder="1,0"></td>
+                        <td><input type="text" name="matrix1_1_1" placeholder="1,1"></td>
+                        <td><input type="text" name="matrix1_1_2" placeholder="1,2"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="matrix1_2_0" placeholder="2,0"></td>
+                        <td><input type="text" name="matrix1_2_1" placeholder="2,1"></td>
+                        <td><input type="text" name="matrix1_2_2" placeholder="2,2"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="matrix2">
+                <h2>Matrix 2</h2>
+                <!-- Input fields for Matrix 2 -->
+                <table>
+                    <tr>
+                        <td><input type="text" name="matrix2_0_0" placeholder="0,0"></td>
+                        <td><input type="text" name="matrix2_0_1" placeholder="0,1"></td>
+                        <td><input type="text" name="matrix2_0_2" placeholder="0,2"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="matrix2_1_0" placeholder="1,0"></td>
+                        <td><input type="text" name="matrix2_1_1" placeholder="1,1"></td>
+                        <td><input type="text" name="matrix2_1_2" placeholder="1,2"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="matrix2_2_0" placeholder="2,0"></td>
+                        <td><input type="text" name="matrix2_2_1" placeholder="2,1"></td>
+                        <td><input type="text" name="matrix2_2_2" placeholder="2,2"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Submit button -->
+        <input type="submit" value="Calculate">
+    </form>
+
+    <!-- Result display -->
+    <div id="result">
+        <!-- Result will be displayed here -->
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
