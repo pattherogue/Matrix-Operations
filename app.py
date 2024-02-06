@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, jsonify
+import numpy as np
 from matrix_operations import add_matrices, subtract_matrices, multiply_matrices, find_determinant
+
 
 app = Flask(__name__)
 
