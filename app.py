@@ -3,7 +3,7 @@ import numpy as np
 from matrix_operations import add_matrices, subtract_matrices, multiply_matrices, find_determinant
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 @app.route('/')
 def index():

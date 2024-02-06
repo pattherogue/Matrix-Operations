@@ -1,0 +1,35 @@
+# Python virtual environment
+venv/
+
+# Compiled Python files
+__pycache__/
+*.pyc
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# User-specific files
+.DS_Store
+Thumbs.db
+
+# Database files (adjust as needed)
+*.db
+*.sqlite3
+
+# Dependency management files
+Pipfile
+Pipfile.lock
+requirements.txt
+
+# Generated files (if applicable)
+generated/
+
+# Sensitive information (exclude any files containing secrets)
+secret_key.json
+
+# Environment-specific files (adjust as needed)
+.env
