@@ -20,16 +20,10 @@ Thumbs.db
 *.db
 *.sqlite3
 
-# Dependency management files
-Pipfile
-Pipfile.lock
+
 
 
 # Generated files (if applicable)
 generated/
 
-# Sensitive information (exclude any files containing secrets)
-secret_key.json
 
-# Environment-specific files (adjust as needed)
-.env
