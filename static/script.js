@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('matrix-form');
     const resultDiv = document.getElementById('result');
+    const loadingDiv = document.getElementById('loading');
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
         resultDiv.innerHTML = ''; // Clear previous results
+        loadingDiv.style.display = 'block'; // Show loading message
 
         const formData = new FormData(form);
         const operation = formData.get('operation');
@@ -27,13 +29,18 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(response => response.json())
         .then(data => {
+            loadingDiv.style.display = 'none'; // Hide loading message
+
             if (data.result !== undefined) {
                 resultDiv.textContent = `Result: ${data.result}`;
+            } else if (data.error) {
+                resultDiv.textContent = `Error: ${data.error}`;
             } else {
                 resultDiv.textContent = 'Invalid input or operation.';
             }
         })
         .catch(error => {
+            loadingDiv.style.display = 'none'; // Hide loading message
             resultDiv.textContent = 'Error occurred during calculation.';
         });
     });
