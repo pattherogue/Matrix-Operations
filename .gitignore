@@ -23,7 +23,7 @@ Thumbs.db
 # Dependency management files
 Pipfile
 Pipfile.lock
-requirements.txt
+
 
 # Generated files (if applicable)
 generated/
