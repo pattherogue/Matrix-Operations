@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>Matrix Operations Calculator</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-    
 </head>
 <body>
     <h1>Matrix Operations Calculator</h1>
@@ -75,7 +73,11 @@
         <!-- Result will be displayed here -->
     </div>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- Loading message -->
+    <div id="loading" style="display: none;">
+        Loading...
+    </div>
 
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
