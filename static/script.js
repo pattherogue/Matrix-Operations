@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('/calculate', {
             method: 'POST',
             body: formData, // Use formData here
-            headers: { 'Content-Type': 'application/json' },
         })
         .then(response => response.json())
         .then(data => {
