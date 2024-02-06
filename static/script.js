@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Send data to the server for calculation and display the result
+        console.log(operation); 
         fetch('/calculate', {
             method: 'POST',
             body: JSON.stringify({ operation, data }),
