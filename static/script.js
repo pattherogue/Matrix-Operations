@@ -1,7 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('matrix-form');
     const resultDiv = document.getElementById('result');
+
+    // Check if the loading element exists in the DOM
     const loadingDiv = document.getElementById('loading');
+    if (!loadingDiv) {
+        console.error('Loading element not found in the DOM.');
+        return;
+    }
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -29,7 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(response => response.json())
         .then(data => {
-            loadingDiv.style.display = 'none'; // Hide loading message
+            if (loadingDiv) {
+                loadingDiv.style.display = 'none'; // Hide loading message
+            }
 
             if (data.result !== undefined) {
                 resultDiv.textContent = `Result: ${data.result}`;
@@ -40,7 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
         .catch(error => {
-            loadingDiv.style.display = 'none'; // Hide loading message
+            if (loadingDiv) {
+                loadingDiv.style.display = 'none'; // Hide loading message
+            }
             resultDiv.textContent = 'Error occurred during calculation.';
         });
     });
