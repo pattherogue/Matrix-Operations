@@ -27,10 +27,17 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
+        // Create a JSON object with the operation and data
+        const dataToSend = {
+            operation: operation,
+            data: data
+        };
+
         // Send data to the server for calculation and display the result
         fetch('/calculate', {
             method: 'POST',
-            body: formData, // Use formData here
+            body: JSON.stringify(dataToSend), // Send JSON data
+            headers: { 'Content-Type': 'application/json' }
         })
         .then(response => response.json())
         .then(data => {
