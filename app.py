@@ -52,11 +52,11 @@ def calculate():
 
             # Perform matrix operation based on the selected operation
             if operation == 'add':
-                result = np.add(matrix1, matrix2)
+                result = np.add(matrix1, matrix2).tolist()
             elif operation == 'subtract':
-                result = np.subtract(matrix1, matrix2)
+                result = np.subtract(matrix1, matrix2).tolist()
             elif operation == 'multiply':
-                result = np.dot(matrix1, matrix2)
+                result = np.dot(matrix1, matrix2).tolist()
             elif operation == 'determinant':
                 if len(matrix1) == 2:
                     result = np.linalg.det(matrix1)
