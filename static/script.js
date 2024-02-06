@@ -27,14 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        // Include the operation value in the formData object
-        formData.append('operation', operation);
-
         // Send data to the server for calculation and display the result
         fetch('/calculate', {
             method: 'POST',
             body: formData, // Use formData here
         })
+
         .then(response => response.json())
         .then(data => {
             if (loadingDiv) {
