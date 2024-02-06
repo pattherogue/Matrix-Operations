@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
+        formData.append('operation', operation);
+        
         // Send data to the server for calculation and display the result
         fetch('/calculate', {
             method: 'POST',
