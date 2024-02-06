@@ -28,12 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         formData.append('operation', operation);
-        
         // Send data to the server for calculation and display the result
         fetch('/calculate', {
             method: 'POST',
-            body: JSON.stringify({ operation, data }), // Convert to JSON
-            headers: { 'Content-Type': 'application/json' }, // Set JSON content type
+            body: formData, // Use formData here
         })
 
         .then(response => response.json())
