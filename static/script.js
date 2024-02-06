@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('matrix-form');
     const resultDiv = document.getElementById('result');
-    const loadingDiv = document.getElementById('loading');
 
+    // Check if the loading element exists in the DOM
+    const loadingDiv = document.getElementById('loading');
     if (!loadingDiv) {
         console.error('Loading element not found in the DOM.');
         return;
@@ -26,16 +27,20 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
+        // Include the operation value in the formData object
+        formData.append('operation', operation);
+
         // Send data to the server for calculation and display the result
-        console.log(operation); 
         fetch('/calculate', {
             method: 'POST',
-            body: JSON.stringify({ operation, data }),
+            body: formData, // Use formData here
             headers: { 'Content-Type': 'application/json' },
         })
         .then(response => response.json())
         .then(data => {
-            loadingDiv.style.display = 'none'; // Hide loading message
+            if (loadingDiv) {
+                loadingDiv.style.display = 'none'; // Hide loading message
+            }
 
             if (data.result !== undefined) {
                 resultDiv.textContent = `Result: ${data.result}`;
@@ -46,7 +51,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
         .catch(error => {
-            loadingDiv.style.display = 'none'; // Hide loading message
+            if (loadingDiv) {
+                loadingDiv.style.display = 'none'; // Hide loading message
+            }
             resultDiv.textContent = 'Error occurred during calculation.';
         });
     });
