@@ -4,7 +4,7 @@ This web-based calculator, built with Flask, demonstrates proficiency in linear 
 
 ## Key Features
 
-- **Linear Algebra Concepts**: Implements fundamental matrix operations, showcasing expertise in linear algebra.
+- **Linear Algebra Concepts**: Implements fundamental matrix operations, showcasing knowledge in linear algebra.
 - **Practical Application**: Demonstrates real-world application of linear algebra concepts through numpy arrays and matrix manipulation techniques.
 - **Efficient Handling**: Provides error handling and informative messages for efficient matrix operation handling.
 - **Testing and Validation**: Includes tests for accuracy and reliability in matrix operations.
