@@ -12,7 +12,7 @@ This web-based calculator, built with Flask, demonstrates proficiency in linear 
 ## Usage
 
 1. Clone the repository and install dependencies using `pip install -r requirements.txt`.
-2. Run the Flask application with `python app.py`.
+2. Run the Flask application with `python3 app.py`.
 3. Access the calculator at `http://localhost:5000` in your web browser.
 4. Input matrices and select operations from the dropdown menu.
 5. Submit the form for calculation and view the result.
